@@ -1,0 +1,51 @@
+﻿@model IEnumerable<UserData.Models.UserDataModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users</h2>
+
+
+<div class="jumbotron">
+@if(Model != null) { 
+<table class="table table-condensed table-responsive table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cellnumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cellnumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "UpdateUser", new { id=item.ID }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+    }
+</table>
+}
+else
+{
+    <p>No Record Added</p>
+}
+
+    <p> @Html.ActionLink("Add User", "CreateUser", null, new { @class = "btn btn-success" })</p>
+</div>

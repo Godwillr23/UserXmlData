@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User>
+    <id>1</id>
+    <firstname>god</firstname>
+    <lastname>test</lastname>
+    <cellnumber>0789639698</cellnumber>
+  </User>
+  <User>
+    <id>2</id>
+    <firstname>cone</firstname>
+    <lastname>ried</lastname>
+    <cellnumber>07665765765</cellnumber>
+  </User>
+</Users>
